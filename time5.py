@@ -18,8 +18,7 @@ clear = [0, 0, 0, 0]  # Defining values used to clear the display
 GPIO.setup(button, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(light, GPIO.OUT)
 
-# Displaying a rolling str
-starttime = time.time()
+starttime = time.time() #time that code started
 
 if GPIO.input(button):
     pass
@@ -32,8 +31,8 @@ if not GPIO.input(button):
 
             # Time printed in a time format of Minutes:Seconds of totaltime
             time.sleep(1)
-            m = strftime("%M", localtime(totaltime))
-            s = strftime("%S", localtime(totaltime))
+            m = strftime("%M", localtime(totaltime))#minuets elpased in format of time
+            s = strftime("%S", localtime(totaltime))#seconds elpased in format of time
             m = int(m)
             s = int(s)
             tm.numbers(m, s)
